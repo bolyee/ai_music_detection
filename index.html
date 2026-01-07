@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오 분석 웹페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>오디오 파일 분석</h1>
+        <p>AI 모델을 사용하여 오디오 파일을 분석합니다. 분석할 파일을 업로드해주세요.</p>
+        
+        <div class="upload-section">
+            <input type="file" id="audio-file-input" accept="audio/*" hidden/>
+            <label for="audio-file-input" class="file-label">파일 선택</label>
+            <span id="file-name" class="file-name">선택된 파일 없음</span>
+        </div>
+
+        <button id="analyze-button" class="analyze-button">분석 시작</button>
+
+        <div id="result-section" class="result-section" style="display: none;">
+            <h2>분석 결과</h2>
+            <div id="loader" class="loader"></div>
+            <div id="analysis-result" class="analysis-result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
